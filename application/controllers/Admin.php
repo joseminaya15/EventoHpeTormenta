@@ -15,17 +15,29 @@ class Admin extends CI_Controller {
 	public function index(){
         $datos = $this->M_reporte->getDatosUser();
         $html  = '';
+        $libro = '';
         if(count($datos) == 0) {
             $html = '';
         }else {
             foreach ($datos as $key){
+                if($key->flag_libro == 1){
+                    $libro = 'Libro Irresistible';
+                }else if($key->flag_libro == 2){
+                    $libro = 'Libro Sálvese';
+                }else if($key->flag_libro == 3){
+                    $libro = 'Libro Life';
+                }else if($key->flag_libro == 4){
+                    $libro = 'Libro The Future';
+                }
                 $html .= '<tr class="tr-cursor-pointer">
-                            <td class="text-left">'.$key->nombre.' '.$key->apellido.'</td>
+                            <td class="text-left">'.$key->nombre.'</td>
+                            <td class="text-left">'.$key->apellido.'</td>
                             <td class="text-left">'.$key->email.'</td>
                             <td class="text-right">'.$key->telefono.'</td>
                             <td class="text-left">'.$key->empresa.'</td>
                             <td class="text-left">'.$key->cargo.'</td>
-                            <td class="text-left">'.$key->pais.'</td>
+                            <td class="text-left">'.$libro.'</td>
+                            <td class="text-center">'.$key->fecha.'</td>
                         </tr>';
             }
         }

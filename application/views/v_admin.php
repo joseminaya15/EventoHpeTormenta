@@ -30,7 +30,7 @@
                 <img src="<?php echo RUTA_IMG?>logo/hpe-logo.png">
             </div>
             <div class="js-header--right">
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-logout" onclick="cerrarCesion()">Logout</button> 
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-logout" onclick="cerrarCesion()">Cerrar sesi&oacute;n</button> 
             </div>
         </div>
         <section class="js-section">
@@ -41,11 +41,13 @@
                             <thead>
                                 <tr class="tr-header-reporte">
                                     <th class="text-left">Nombre</th>
+                                    <th class="text-left">Apellido</th>
                                     <th class="text-left">Email</th>
                                     <th class="text-right">Tel&eacute;fono</th>
-                                    <th class="text-left">Empresa(Canal)</th>
+                                    <th class="text-left">Empresa</th>
                                     <th class="text-left">Cargo</th>
-                                    <th class="text-left">País</th>
+                                    <th class="text-left">Libro</th>
+                                    <th class="text-center">Fecha</th>
                                 </tr>
                             </thead>
                           <tbody>

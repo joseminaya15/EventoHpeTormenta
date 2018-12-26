@@ -27,7 +27,7 @@ class Home extends CI_Controller {
 			$telefono	    = $this->input->post('Phone');
 			$empresa 		= $this->input->post('Company');
 			$cargo 		    = $this->input->post('Position');
-			$pais	 		= $this->input->post('Country');
+			$book 		    = $this->input->post('Book');
 			$existe         = $this->M_Datos->existCorreo($correo);
 			$fecha          = date('Y-m-d');
 			if(count($existe) != 0) {
@@ -40,9 +40,9 @@ class Home extends CI_Controller {
 										   'telefono' 	=> $telefono,
 										   'empresa'    => $empresa,
 										   'cargo'      => $cargo,
-										   'pais'       => $pais,
+										   'flag_libro' => $book,
 										   'fecha'      => $fecha);
-				$datoInsert  = $this->M_Datos->insertarDatos($insertParticipante,'participante');
+				$datoInsert  = $this->M_Datos->insertarDatos($insertParticipante,'contact');
 				$this->sendConfirmation($correo);
 	          	$data['msj']   = $datoInsert['msj'];
 	          	$data['error'] = $datoInsert['error'];
@@ -58,10 +58,10 @@ class Home extends CI_Controller {
 		try {  
 			$this->load->library("email");
 			$configGmail = array('protocol'  => 'smtp',
-			                     'smtp_host' => 'smtpout.secureserver.net',
-			                     'smtp_port' => 3535,
-			                     'smtp_user' => 'info@marketinghpe.com',
-			                     'smtp_pass' => 'hpEmSac$18',
+			                     'smtp_host' => 'mail.testingsite.host',
+			                     'smtp_port' => 587,
+			                     'smtp_user' => 'benitan@testingsite.host',
+			                     'smtp_pass' => 'B3n1t4n',
 			                     'mailtype'  => 'html',
 			                     'charset'   => 'utf-8',
 			                     'newline'   => "\r\n");    
@@ -69,35 +69,28 @@ class Home extends CI_Controller {
 			$this->email->from('info@marketinghpe.com');
 			$this->email->to($correo);
 			// $this->email->to('jose.minayac15@gmail.com');
-			$this->email->subject('HPE - Gracias por registrarse en nuestro evento.');
+			$this->email->subject('Invitación HPE Persiguiendo tormentas.');
 			$texto = '<!DOCTYPE html>
 			                <html>
 			                    <body>
-			                        <table width="500px" cellpadding="0" cellspacing="0" align="center" style="border: solid 1px #ccc;">
+			                        <table width="500" cellpadding="0" cellspacing="0" align="center" style="border: solid 1px #ccc;">
 			                            <tr>
-			                                <td>
-			                                    <table width="500" cellspacing="0" cellpadding="0" border="0" align="center" style="background-color: #415564;padding: 15px 20px;">
+			                                <td style="background-color: #415564;width:100%;">
+			                                    <table width="500" cellspacing="0" cellpadding="0" border="0" style="background-color: #415564;padding: 10px 20px;width: 100%;">
 			                                        <tr>
-			                                            <td>
-			                                                <table>
-			                                                    <tr>
-			                                                        <td><a href="#"><img src="http://www.marketinghp.net/microsite/DCN/evento_cr/public/img/logo/hpe-vmware.png" width="240" alt="alternative text" border="0" style="display: block;"></a></td>
-			                                                        <td></td>
-			                                                    </tr>
-			                                                </table>
-			                                            </td>
+														<td><a href="#"><img src="http://testingsite.host/EventoHpeTormenta/public/img/logo/hpe-logo.png" width="125" alt="alternative text" border="0" style="display: block;"></a></td>
 			                                        </tr>
 			                                    </table>
 			                                </td>
 			                            </tr>
 			                            <tr>
 			                                <td>
-			                                    <table width="400" cellspacing="0" cellpadding="0" border="0" align="center" style="padding: 30px 0">
+			                                    <table width="400" cellspacing="0" cellpadding="0" border="0" align="center" style="padding: 30px 10px">
 			                                        <tr>
 			                                            <td style="text-align: center;padding: 0;margin: 0;padding-bottom: 10px"><font style="font-family: arial;color: #000000;font-size: 18px;font-weight: 600">Muchas gracias.<br> Su registro ha sido realizado con éxito.</font></td>
 			                                        </tr>
 			                                        <tr>
-			                                            <td style="text-align: center;"><font style="font-family: arial;color: #757575;font-size: 12px;">&copy;Copyright 2018 Hewlett Packard Enterprice Development LP</font></td>
+			                                            <td style="text-align: center;"><font style="font-family: arial;color: #757575;font-size: 12px;">&copy;Copyright 2018 Hewlett Packard Enterprise Development LP</font></td>
 			                                        </tr>
 			                                    </table>
 			                                </td>

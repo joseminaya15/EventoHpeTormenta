@@ -19,13 +19,17 @@ $('a.link[href^="#"]').click(function(e) {
  	}, 'slow');
 });
 function sendInformation(){
+	var check_book  = null;
 	var name 		= $('#name').val();
 	var surname 	= $('#surname').val();
 	var email 		= $('#email').val();
 	var phone 		= $('#phone').val();
 	var company 	= $('#company').val();
 	var position 	= $('#position').val();
-	var country 	= $('#country').val();
+	var option1     = $('#option-1').is(':checked');
+	var option2		= $('#option-2').is(':checked');
+	var option3 	= $('#option-3').is(':checked');
+	var option4		= $('#option-4').is(':checked');
 	if(name == null || name == '') {
 		msj('error', 'Nombre debe completarse');
 		return;
@@ -54,9 +58,14 @@ function sendInformation(){
 		msj('error', 'Cargo debe completarse');
 		return;
 	}
-	if(country == null || country == '') {
-		msj('error', 'País debe completarse');
-		return;
+	if(option1 == true){
+		check_book = 1;
+	}else if(option2 == true) {
+		check_book = 2;
+	}else if(option3 == true) {
+		check_book = 3;
+	}else if(option4 == true) {
+		check_book = 4;
 	}
 	$.ajax({
 		data : {Name	    : name,
@@ -65,7 +74,7 @@ function sendInformation(){
 				Phone	    : phone,
 				Company	    : company,
 				Position    : position,
-				Country	    : country},
+				Book	    : check_book},
 		url  : 'home/register',
 		type : 'POST'
 	}).done(function(data){
@@ -73,9 +82,6 @@ function sendInformation(){
 			data = JSON.parse(data);
 			if(data.error == 0){
 				$('.js-input').find('input').val('');
-				$('.js-input').find('select').val('0');
-				$('.js-input').find('select').selectpicker('refresh');
-				$('#confirmation').addClass('aparecer');
 				msj('success', data.msj);
         	}else{
         		msj('error', data.msj);
@@ -95,4 +101,17 @@ function verificarDatos(e) {
 		e.preventDefault();
 		ingresar();
     }
+}
+function openModalLibro(id){
+	var id = $('#'+id);
+	var modalTeam = $('#ModalLibro');
+	var imgModal = id.find('img').attr('src');
+	var tituloModal = id.find('h2');
+	var descripcion = id.find('p');
+	var contenido = id.find('.jm-tea__contenido');
+	modalTeam.find('img').attr('src',imgModal)
+	modalTeam.find('h2').text(tituloModal[0].innerText);
+	modalTeam.find('p').text(descripcion[0].innerText);
+	modalTeam.find('.jm-modal--texto').html(contenido[0].innerHTML)
+	modalTeam.modal('show');
 }

@@ -17,7 +17,7 @@ class M_Datos extends  CI_Model{
 
     function existCorreo($correo){
         $sql = "SELECT email
-                  FROM participante
+                  FROM contact
                   WHERE email = ?";
         $result = $this->db->query($sql, array($correo));
         return $result->result();

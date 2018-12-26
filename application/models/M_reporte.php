@@ -6,7 +6,7 @@ class M_reporte extends  CI_Model{
     }
 
     function getDatosUser() {
-        $sql = "SELECT * FROM participante";
+        $sql = "SELECT * FROM contact";
         $result = $this->db->query($sql);
         return $result->result();
     }
