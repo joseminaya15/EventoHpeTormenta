@@ -105,13 +105,10 @@ function verificarDatos(e) {
 function openModalLibro(id){
 	var id = $('#'+id);
 	var modalTeam = $('#ModalLibro');
-	var imgModal = id.find('img').attr('src');
-	var tituloModal = id.find('h2');
-	var descripcion = id.find('p');
+	var tituloModal = id.parents('.jm-book').find('h2');
+	var descripcion = id.parents('.jm-book').find('p');
 	var contenido = id.find('.jm-tea__contenido');
-	modalTeam.find('img').attr('src',imgModal)
 	modalTeam.find('h2').text(tituloModal[0].innerText);
 	modalTeam.find('p').text(descripcion[0].innerText);
-	modalTeam.find('.jm-modal--texto').html(contenido[0].innerHTML)
 	modalTeam.modal('show');
 }
