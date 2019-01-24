@@ -28,7 +28,7 @@
                 <img src="<?php echo RUTA_IMG?>logo/hpe-logo.png">
             </div>
             <div class="js-header--right">
-                <p>P&aacute;gina de Registro</p>
+                <img src="<?php echo RUTA_IMG?>logo/logo-sass.png">
             </div>
         </div>
     </div>
@@ -46,7 +46,8 @@
     <section id="register" class="js-section">
         <div class="js-container">
             <div class="js-information">
-                <h2>Mi&eacute;rcoles 30 de Enero, 2019</h2>
+                <h1>SAS y Hewlett Packard Enterprise se asocian para ayudar a nuestros clientes a resolver sus problemas comerciales m&aacute;s dif&iacute;ciles</h1>
+                <h2>Jueves 7 de Febrero, 2019</h2>
                 <h3>Hora de inicio: 4:00 p.m.</h3>
                 <p>K'abel Sala de eventos</p>
                 <span>6A Avenida 9-18 zona 10, Edificio Sixtino nivel 10, Ciudad de Guatemala</span>
@@ -92,8 +93,8 @@
                     </div>
                 </div>
                 <div class="col-xs-12 text-center jm-subtitle">
-                    <p>Parte de la filosofia de componentes El Orbe es compartir conocimiento por lo que queremos  obsequiarle un 
-                    libro de esta coleccion de reciente lanzamiento. Marque el de su preferencia el cual se le entregara en el evento.</p>
+                    <p>Parte de la filosofia de <strong style="font-weight: 100;">Componentes El Orbe</strong> es compartir conocimiento por lo que queremos  obsequiarle a los 40
+                    primeros registrados un libro de esta coleccion de reciente lanzamiento. Marque el de su preferencia el cual se le entregara en el evento.</p>
                 </div>
                 <div class="col-xs-12">
                     <div class="col-md-3 col-sm-6 col-xs-6 jm-book">

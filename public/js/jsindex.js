@@ -82,6 +82,8 @@ function sendInformation(){
 			data = JSON.parse(data);
 			if(data.error == 0){
 				$('.js-input').find('input').val('');
+				$('.mdl-radio').removeClass('is-checked');
+				$('.mdl-radio__button').prop('checked', false);
 				msj('success', data.msj);
         	}else{
         		msj('error', data.msj);

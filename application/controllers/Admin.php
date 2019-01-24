@@ -28,6 +28,8 @@ class Admin extends CI_Controller {
                     $libro = 'Libro Life';
                 }else if($key->flag_libro == 4){
                     $libro = 'Libro The Future';
+                }else{
+                    $libro = 'Ninguno';
                 }
                 $html .= '<tr class="tr-cursor-pointer">
                             <td class="text-left">'.$key->nombre.'</td>

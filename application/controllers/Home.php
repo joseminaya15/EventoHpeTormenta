@@ -58,15 +58,15 @@ class Home extends CI_Controller {
 		try {  
 			$this->load->library("email");
 			$configGmail = array('protocol'  => 'smtp',
-			                     'smtp_host' => 'mail.testingsite.host',
+			                     'smtp_host' => 'mail.iradianty.com',
 			                     'smtp_port' => 587,
-			                     'smtp_user' => 'benitan@testingsite.host',
-			                     'smtp_pass' => 'B3n1t4n',
+			                     'smtp_user' => 'info@iradianty.com',
+			                     'smtp_pass' => 'EduardoBenavides2019!',
 			                     'mailtype'  => 'html',
 			                     'charset'   => 'utf-8',
 			                     'newline'   => "\r\n");    
 			$this->email->initialize($configGmail);
-			$this->email->from('info@marketinghpe.com');
+			$this->email->from('info@iradianty.com');
 			$this->email->to($correo);
 			// $this->email->to('jose.minayac15@gmail.com');
 			$this->email->subject('Invitación HPE Persiguiendo tormentas.');
@@ -78,7 +78,7 @@ class Home extends CI_Controller {
 			                                <td style="background-color: #415564;width:100%;">
 			                                    <table width="500" cellspacing="0" cellpadding="0" border="0" style="background-color: #415564;padding: 10px 20px;width: 100%;">
 			                                        <tr>
-														<td><a href="#"><img src="http://testingsite.host/EventoHpeTormenta/public/img/logo/hpe-logo.png" width="125" alt="alternative text" border="0" style="display: block;"></a></td>
+														<td><a href="#"><img src="http://iradianty.com/HPE/events/microsite/persiguiendotormentas/public/img/logo/hpe-logo.png" width="125" alt="alternative text" border="0" style="display: block;"></a></td>
 			                                        </tr>
 			                                    </table>
 			                                </td>
