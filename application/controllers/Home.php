@@ -88,7 +88,13 @@ class Home extends CI_Controller {
 			                                    <table width="400" cellspacing="0" cellpadding="0" border="0" align="center" style="padding: 30px 10px">
 			                                        <tr>
 			                                            <td style="text-align: center;padding: 0;margin: 0;padding-bottom: 10px"><font style="font-family: arial;color: #000000;font-size: 18px;font-weight: 600">Muchas gracias.<br> Su registro ha sido realizado con éxito.</font></td>
-			                                        </tr>
+													</tr>
+													<tr>
+			                                            <td style="text-align: center;padding: 0;margin: 0;padding-bottom: 10px"><font style="font-family: arial;color: #01a982;font-size: 14px;font-weight: 600">Un evento de</font></td>
+													</tr>
+													<tr>
+														<td><img src="http://iradianty.com/HPE/events/microsite/persiguiendotormentas/public/img/logo/logo-orbe.png" width="100" height="140" style="display: block;margin:auto;margin-bottom: 10px;"></td>
+													</tr>
 			                                        <tr>
 			                                            <td style="text-align: center;"><font style="font-family: arial;color: #757575;font-size: 12px;">&copy;Copyright 2018 Hewlett Packard Enterprise Development LP</font></td>
 			                                        </tr>

@@ -46,11 +46,13 @@
     <section id="register" class="js-section">
         <div class="js-container">
             <div class="js-information">
-                <h1>SAS y Hewlett Packard Enterprise se asocian para ayudar a nuestros clientes a resolver sus problemas comerciales m&aacute;s dif&iacute;ciles</h1>
+                <h1>El ORBE ofrece a sus clientes soluciones tecnol&oacute;gicas innovadoras, basadas en el portafolio de l&iacute;deres de la industria como HPE y SAS, para apoyarles en su proceso de transformaci&oacute;n y en su capacidad para tomar mejores decisiones y generar mayores resultados para su negocio.</h1>
                 <h2>Jueves 7 de Febrero, 2019</h2>
                 <h3>Hora de inicio: 4:00 p.m.</h3>
                 <p>K'abel Sala de eventos</p>
                 <span>6A Avenida 9-18 zona 10, Edificio Sixtino nivel 10, Ciudad de Guatemala</span>
+                <h4>Un evento de</h4>
+                <img src="<?php echo RUTA_IMG?>logo/logo-orbe.png">
             </div>
             <div class="js-title">
                 <h2>Reg&iacute;strese completando el siguiente formulario</h2>
