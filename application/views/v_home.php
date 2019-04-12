@@ -50,7 +50,7 @@
                 <h2>Jueves 7 de Febrero, 2019</h2>
                 <h3>Hora de inicio: 4:00 p.m.</h3>
                 <p>K'abel Sala de eventos</p>
-                <span>6A Avenida 9-18 zona 10, Edificio Sixtino nivel 10, Ciudad de Guatemala</span>
+                <span>6A Avenida 9-18 zona 10, Edificio Sixtino2 nivel 10, Ciudad de Guatemala</span>
                 <h4>Un evento de</h4>
                 <img src="<?php echo RUTA_IMG?>logo/logo-orbe.png">
             </div>
